@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Forms Challenge</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+    <main>
+      <form action="/do_my_self(form)" method="GET">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <!-- label의 for와 input의 id 속성값은 동일해야된다. -->
+              <label for="username">Your Name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your E-Mail Address</label>
+              <input type="email" name="user-email" id="useremail" required />
+            </li>
+            <li>
+              <label for="userphone">Your Phone Number</label>
+              <input
+                type="tel"
+                name="user-phone"
+                id="userphone"
+                required
+                pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}"
+              />
+            </li>
+            <li>
+              <label for="usermessage">Your message</label>
+              <textarea name="" id="usermessage" cols="30" rows="7"></textarea>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <label for="find-path">How did you find us?</label>
+          <select name="find-path" id="find-path" required>
+            <option value="web">Web Search</option>
+            <option value="word-of-mouth">Word-of-Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </section>
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+                required
+              />
+              <label for="verify-phone">Call me</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Send me an email</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-dont"
+                value="dont"
+                required
+              />
+              <label for="verify-dont">Don't reply</label>
+            </li>
+          </ul>
+        </section>
+        <section class="form-control-inline">
+          <input type="checkbox" name="term" id="agree-terms" required />
+          <label for="agree-terms">Accept Terms</label>
+        </section>
+        <section id="form-actions">
+          <button type="reset" class="btn-empty">Clear</button>
+          <button type="submit" class="btn-filled">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
