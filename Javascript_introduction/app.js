@@ -40,4 +40,12 @@ alert(totalAdultYears);
 age = 45;
 totalAdultYears = calculateAdultYears(age);
 // adultYears = age - 18;
-alert(totalAdultYears);
+// alert(totalAdultYears);
+console.log(totalAdultYears);
+let person = {
+  name: "max",
+  greet() {
+    console.log("hello");
+  },
+};
+person.greet();
